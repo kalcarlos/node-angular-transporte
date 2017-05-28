@@ -1,74 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="favicon.ico">
-
-    <title>Projeto Transporte</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="css/font-awesome.css" rel="stylesheet">
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="css/justified-nav.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="js/ie-emulation-modes-warning.js"></script>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
-
 <body>
   <div class="container">
-    <!-- The justified navigation menu is meant for single line per list item.
-        Multiple lines will require custom code not provided by Bootstrap. -->
-    <div class="masthead">
-        <h3 class="text-muted">Projeto Transporte</h3>
-        <nav>
-            <ul class="nav nav-justified">
-            <li><a href="index.html">Página inicial</a></li>
-            <li class="active"><a href="empresas.html">Empresas</a></li>
-            <li><a href="enderecos.html">Endereços</a></li>
-            <li><a href="#">Motoristas</a></li>
-            <li><a href="#">Rotas</a></li>
-            <li><a href="#">Veículos</a></li>
-            <li><a href="#">Transportes</a></li>
-            <li><a href="#">Sobre</a></li>
-            </ul>
-        </nav>
-    </div>
     </br>
     <div class="row">
       <div class="col-sm-10">
         <form class="form-inline">
           <div class="form-group">
-            <label for="busca" class="col-sm-3 control-label">Filtro</label>
-            <div class="col-sm-9">
-              <input type="text" class="form-control" id="busca" placeholder="Filtro">
-            </div>
-          </div>
-          <div class="form-group">
-            <button class="btn btn-success">Buscar</button>
+            <label for="filtro" class="control-label">Filtro:</label>
+            <input type="text" class="form-control" id="filtro" name="filtro" placeholder="Filtro" ng-model="vm.filtro">
+            <a class="btn btn-primary" ng-click="vm.buscar()">
+              <span>Buscar</span>
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </a>
           </div>
         </form>
       </div>
       <div class="col-sm-2 text-right">
-        <a class="btn btn-primary" href="empresas-cad.html">Novo</a>
+        <a class="btn btn-success pull-right" href="#/empresas/new">
+          <i class="fa fa-plus-square-o" aria-hidden="true"></i>
+          <span>Novo</span>
+        </a>
       </div>
     </div>
     </br>
@@ -83,132 +35,23 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Empresa Exemplo</td>
-          <td>Exemplo</td>
-          <td>34.572.372/0001-04</td>
-          <td>Rua Exemplo</td>
-          <td>
-            <a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-          </td>
-        </tr>
-        <tr>
-          <td>Empresa Exemplo</td>
-          <td>Exemplo</td>
-          <td>34.572.372/0001-04</td>
-          <td>Rua Exemplo</td>
-          <td>
-            <a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-          </td>
-        </tr>
-        <tr>
-          <td>Empresa Exemplo</td>
-          <td>Exemplo</td>
-          <td>34.572.372/0001-04</td>
-          <td>Rua Exemplo</td>
-          <td>
-            <a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-          </td>
-        </tr>
-        <tr>
-          <td>Empresa Exemplo</td>
-          <td>Exemplo</td>
-          <td>34.572.372/0001-04</td>
-          <td>Rua Exemplo</td>
-          <td>
-            <a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-          </td>
-        </tr>
-        <tr>
-          <td>Empresa Exemplo</td>
-          <td>Exemplo</td>
-          <td>34.572.372/0001-04</td>
-          <td>Rua Exemplo</td>
-          <td>
-            <a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-          </td>
-        </tr>
-        <tr>
-          <td>Empresa Exemplo</td>
-          <td>Exemplo</td>
-          <td>34.572.372/0001-04</td>
-          <td>Rua Exemplo</td>
-          <td>
-            <a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-          </td>
-        </tr>
-        <tr>
-          <td>Empresa Exemplo</td>
-          <td>Exemplo</td>
-          <td>34.572.372/0001-04</td>
-          <td>Rua Exemplo</td>
-          <td>
-            <a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-          </td>
-        </tr>
-        <tr>
-          <td>Empresa Exemplo</td>
-          <td>Exemplo</td>
-          <td>34.572.372/0001-04</td>
-          <td>Rua Exemplo</td>
-          <td>
-            <a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-          </td>
-        </tr>
-        <tr>
-          <td>Empresa Exemplo</td>
-          <td>Exemplo</td>
-          <td>34.572.372/0001-04</td>
-          <td>Rua Exemplo</td>
-          <td>
-            <a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-          </td>
-        </tr>
-        <tr>
-          <td>Empresa Exemplo</td>
-          <td>Exemplo</td>
-          <td>34.572.372/0001-04</td>
-          <td>Rua Exemplo</td>
-          <td>
-            <a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-          </td>
-        </tr>
-        <tr>
-          <td>Empresa Exemplo</td>
-          <td>Exemplo</td>
-          <td>34.572.372/0001-04</td>
-          <td>Rua Exemplo</td>
-          <td>
-            <a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+        <tr ng-repeat="item in vm.empresas">
+          <td>{{item.nomeFantasia}}</td>
+          <td>{{item.razaoSocial}}</td>
+          <td>{{item.cnpj}}</td>
+          <td>{{item.endereco}}</td>
+          <td class="text-right">
+            <a class="btn btn-link" ng-href="{{'#/empresas/' + item._id}}">
+              <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+            </a>
+            <button type="button" class="btn btn-link" ng-click="vm.remover(item)">
+              <i class="fa fa-trash-o" aria-hidden="true"></i>
+            </button>
           </td>
         </tr>
       </tbody>
     </table>
   </div>
   <!-- /.container -->
-
-
-  <!-- Bootstrap core JavaScript
-    ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script>
-    window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')
-  </script>
-  <script src="js/bootstrap.min.js"></script>
-  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-  <script src="js/ie10-viewport-bug-workaround.js"></script>
 </body>
-
 </html>
