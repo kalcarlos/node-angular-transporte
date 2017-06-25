@@ -89,6 +89,21 @@
         controller: 'MotoristaCadController',
         controllerAs: 'vm'
       })
+      .when('/rotas', {
+        templateUrl: 'partials/rotas.html',
+        controller: 'RotaController',
+        controllerAs: 'vm'
+      })
+      .when('/rotas/new', {
+        templateUrl: 'partials/rotas-cad.html',
+        controller: 'RotaCadController',
+        controllerAs: 'vm'
+      })
+      .when('/rotas/:id', {
+        templateUrl: 'partials/rotas-cad.html',
+        controller: 'RotaCadController',
+        controllerAs: 'vm'
+      })
       .otherwise('/');
   }
 })();

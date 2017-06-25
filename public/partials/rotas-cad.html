@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<body>
+  <div class="container">
+    </br>
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label for="descricao" class="col-sm-2 control-label">Descrição</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" id="descricao" ng-model="vm.rota.descricao" placeholder="Digite a descrição da rota">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="origem" class="col-sm-2 control-label">Origem</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" id="origem" ng-model="vm.rota.origem" placeholder="Endereço de origem">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="destino" class="col-sm-2 control-label">Destino</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" id="cnpj" ng-model="vm.rota.destino" placeholder="Endereço de destino">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="qtdeKm" class="col-sm-2 control-label">Quantidade KM</label>
+        <div class="col-sm-2">
+          <input type="text" class="form-control" id="qtdeKm" ng-model="vm.rota.qtdeKm" placeholder="Quantidade de KM">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="dataSaida" class="col-sm-2 control-label">Data de saída</label>
+        <div class="col-sm-4">
+          <input type="text" class="form-control" id="dataSaida" ng-model="vm.rota.dataSaida" placeholder="Data de saída">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="motorista" class="col-sm-2 control-label">Motorista</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" id="motorista" ng-model="vm.rota.motorista" placeholder="Motorista">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2 text-right">
+          <a href="#/rotas" class="btn btn-danger">Cancelar</a>
+          <button ng-click="vm.salvar()" type="button" class="btn btn-success">Salvar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <!-- /.container -->
+</body>
+</html>
