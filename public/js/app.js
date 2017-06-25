@@ -104,6 +104,21 @@
         controller: 'RotaCadController',
         controllerAs: 'vm'
       })
+      .when('/transportes', {
+        templateUrl: 'partials/transportes.html',
+        controller: 'TransporteController',
+        controllerAs: 'vm'
+      })
+      .when('/transportes/new', {
+        templateUrl: 'partials/transportes-cad.html',
+        controller: 'TransporteCadController',
+        controllerAs: 'vm'
+      })
+      .when('/transportes/:id', {
+        templateUrl: 'partials/transportes-cad.html',
+        controller: 'TransporteCadController',
+        controllerAs: 'vm'
+      })
       .otherwise('/');
   }
 })();
