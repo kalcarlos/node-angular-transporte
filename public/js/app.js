@@ -44,6 +44,21 @@
         controller: 'EnderecoCadController',
         controllerAs: 'vm'
       })
+      .when('/veiculos', {
+        templateUrl: 'partials/veiculos.html',
+        controller: 'VeiculoController',
+        controllerAs: 'vm'
+      })
+      .when('/veiculos/new', {
+        templateUrl: 'partials/veiculos-cad.html',
+        controller: 'VeiculoCadController',
+        controllerAs: 'vm'
+      })
+      .when('/veiculos/:id', {
+        templateUrl: 'partials/veiculos-cad.html',
+        controller: 'VeiculoCadController',
+        controllerAs: 'vm'
+      })
       .otherwise('/');
   }
 })();

@@ -20,9 +20,11 @@
     <!-- Custom styles for this template -->
     <link href="css/justified-nav.css" rel="stylesheet">
 
+    <link href="css/font-awesome.css" rel="stylesheet">
+
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="js/bootstrap/ie-emulation-modes-warning.js"></script>
+    <!--[if lt IE 9]><script src="js/vendor/bootstrap/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/vendor/bootstrap/ie-emulation-modes-warning.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -48,6 +50,7 @@
             <li><a href="#/rotas">Rotas</a></li>
             <li><a href="#/veiculos">Veículos</a></li>
             <li><a href="#/transportes">Transportes</a></li>
+            <li><a href="#/produtos">Produtos</a></li>
             <li><a href="#/sobre">Sobre</a></li>
           </ul>
         </nav>
@@ -58,18 +61,24 @@
     <ng-view></ng-view>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="js/bootstrap/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/vendor/bootstrap/ie10-viewport-bug-workaround.js"></script>
 
     <script src="js/vendor/angular/angular.min.js"></script>
     <script src="js/vendor/angular/angular-route.min.js"></script>
     <script src="js/vendor/angular/angular-locale_pt-br.js"></script>
     <script src="js/vendor/angular/ui-bootstrap-tpls-2.5.0.min.js"></script>
     <script src="js/app.js"></script>
+
     <script src="js/services/empresa.service.js"></script>
     <script src="js/controllers/empresa-cad.controller.js"></script>
     <script src="js/controllers/empresa.controller.js"></script>
+
     <script src="js/services/endereco.service.js"></script>
     <script src="js/controllers/endereco-cad.controller.js"></script>
-    <script src="js/controllers/endereco.controller.js"></script>    
+    <script src="js/controllers/endereco.controller.js"></script> 
+
+    <script src="js/services/veiculo.service.js"></script>
+    <script src="js/controllers/veiculo-cad.controller.js"></script>
+    <script src="js/controllers/veiculo.controller.js"></script>    
   </body>
 </html>
