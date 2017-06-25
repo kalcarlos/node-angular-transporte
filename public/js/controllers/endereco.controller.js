@@ -3,12 +3,12 @@
 
   angular
     .module('app')
-    .controller('EmpresaController', EmpresaController);
+    .controller('EnderecoController', EnderecoController);
 
-  EmpresaController.$inject = ['EmpresaService']
-  function EmpresaController(EmpresaService) {
+  EnderecoController.$inject = ['EnderecoService']
+  function EnderecoController(EnderecoService) {
     var vm = this;
-    vm.empresas = [];
+    vm.enderecos = [];
     vm.filtro = '';
     vm.remover = remover;
     vm.buscar = init;
@@ -16,14 +16,14 @@
     init();
 
     function init() {
-      var filter = vm.filtro ? { nomeFantasia: vm.filtro } : {}
-      EmpresaService.find(filter)
+      var filter = vm.filtro ? { logradouro: vm.filtro } : {}
+      EnderecoService.find(filter)
         .success(function (data) {
-          vm.empresas = data;
+          vm.enderecos = data;
         });
     }
 
-    function remover(empresa) {
+    function remover(endereco) {
     //   confirmBox('Deseja realmente remover o cliente "' + cliente.nome + '"', function () {
     //     ClienteService.remove(cliente._id)
     //       .success(function () {
@@ -31,9 +31,9 @@
     //       });
     //   });
 
-      if (!confirm('Deseja realmente remover a empresa "' + empresa.nomeFantasia + '"'))
+      if (!confirm('Deseja realmente remover o endereço "' + endereco.logradouro + '"'))
         return;
-      EmpresaService.remove(empresa._id)
+      EnderecoService.remove(endereco._id)
         .success(function () {
           init();
         });
