@@ -59,6 +59,21 @@
         controller: 'VeiculoCadController',
         controllerAs: 'vm'
       })
+      .when('/produtos', {
+        templateUrl: 'partials/produtos.html',
+        controller: 'ProdutoController',
+        controllerAs: 'vm'
+      })
+      .when('/produtos/new', {
+        templateUrl: 'partials/produtos-cad.html',
+        controller: 'ProdutoCadController',
+        controllerAs: 'vm'
+      })
+      .when('/produtos/:id', {
+        templateUrl: 'partials/produtos-cad.html',
+        controller: 'ProdutoCadController',
+        controllerAs: 'vm'
+      })
       .otherwise('/');
   }
 })();

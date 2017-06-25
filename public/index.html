@@ -49,9 +49,8 @@
             <li><a href="#/motoristas">Motoristas</a></li>
             <li><a href="#/rotas">Rotas</a></li>
             <li><a href="#/veiculos">Veículos</a></li>
-            <li><a href="#/transportes">Transportes</a></li>
             <li><a href="#/produtos">Produtos</a></li>
-            <li><a href="#/sobre">Sobre</a></li>
+            <li><a href="#/transportes">Transportes</a></li>
           </ul>
         </nav>
       </div>
@@ -59,6 +58,18 @@
     </div> <!-- /container -->
 
     <ng-view></ng-view>
+
+    <!-- Jumbotron -->
+    <div class="jumbotron">
+        <h1>Realize seus transportes!</h1>
+        <p class="lead">Projeto para o curso de Javascript.</p>
+        <p><a class="btn btn-lg btn-success" href="#" role="button">Inicie agora</a></p>
+    </div>
+
+    <!-- Site footer -->
+    <footer class="footer">
+        <p>&copy; 2017 Carlos Eduardo, Javascript.</p>
+    </footer>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/vendor/bootstrap/ie10-viewport-bug-workaround.js"></script>
@@ -80,5 +91,9 @@
     <script src="js/services/veiculo.service.js"></script>
     <script src="js/controllers/veiculo-cad.controller.js"></script>
     <script src="js/controllers/veiculo.controller.js"></script>    
+
+    <script src="js/services/produto.service.js"></script>
+    <script src="js/controllers/produto-cad.controller.js"></script>
+    <script src="js/controllers/produto.controller.js"></script>   
   </body>
 </html>
