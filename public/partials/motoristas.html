@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<body>
+  <div class="container">
+    </br>
+    <div class="row">
+      <div class="col-sm-10">
+        <form class="form-inline">
+          <div class="form-group">
+            <label for="filtro" class="control-label">Filtro:</label>
+            <input type="text" class="form-control" id="filtro" name="filtro" placeholder="Filtro" ng-model="vm.filtro">
+            <a class="btn btn-primary" ng-click="vm.buscar()">
+              <span>Buscar</span>
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </a>
+          </div>
+        </form>
+      </div>
+      <div class="col-sm-2 text-right">
+        <a class="btn btn-success pull-right" href="#/motoristas/new">
+          <i class="fa fa-plus-square-o" aria-hidden="true"></i>
+          <span>Novo</span>
+        </a>
+      </div>
+    </div>
+    </br>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>CPF</th>
+          <th>Data de nascimento</th>
+          <th>Veículo</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="item in vm.motoristas">
+          <td>{{item.nome}}</td>
+          <td>{{item.cpf}}</td>
+          <td>{{item.dataNascimento}}</td>
+          <td>{{item.veiculo}}</td>
+          <td class="text-right">
+            <a class="btn btn-link" ng-href="{{'#/motoristas/' + item._id}}">
+              <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+            </a>
+            <button type="button" class="btn btn-link" ng-click="vm.remover(item)">
+              <i class="fa fa-trash-o" aria-hidden="true"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- /.container -->
+</body>
+</html>

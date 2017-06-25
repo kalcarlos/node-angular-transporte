@@ -74,6 +74,21 @@
         controller: 'ProdutoCadController',
         controllerAs: 'vm'
       })
+      .when('/motoristas', {
+        templateUrl: 'partials/motoristas.html',
+        controller: 'MotoristaController',
+        controllerAs: 'vm'
+      })
+      .when('/motoristas/new', {
+        templateUrl: 'partials/motoristas-cad.html',
+        controller: 'MotoristaCadController',
+        controllerAs: 'vm'
+      })
+      .when('/motoristas/:id', {
+        templateUrl: 'partials/motoristas-cad.html',
+        controller: 'MotoristaCadController',
+        controllerAs: 'vm'
+      })
       .otherwise('/');
   }
 })();
