@@ -37,9 +37,9 @@
       <tbody>
         <tr ng-repeat="item in vm.transportes">
           <td>{{item.dataEntrega}}</td>
-          <td>{{item.produto}}</td>
-          <td>{{item.rota}}</td>
-          <td>{{item.empresa}}</td>
+          <td>{{item.produto.descricao}}</td>
+          <td>{{item.rota.descricao}}</td>
+          <td>{{item.empresa.nomeFantasia}}</td>
           <td class="text-right">
             <a class="btn btn-link" ng-href="{{'#/transportes/' + item._id}}">
               <i class="fa fa-pencil-square-o" aria-hidden="true"></i>

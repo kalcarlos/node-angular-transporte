@@ -39,11 +39,11 @@
       <tbody>
         <tr ng-repeat="item in vm.rotas">
           <td>{{item.descricao}}</td>
-          <td>{{item.origem}}</td>
-          <td>{{item.destino}}</td>
+          <td>{{item.origem.logradouro}}</td>
+          <td>{{item.destino.logradouro}}</td>
           <td>{{item.qtdeKm}}</td>
           <td>{{item.dataSaida}}</td>
-          <td>{{item.motorista}}</td>
+          <td>{{item.motorista.nome}}</td>
           <td class="text-right">
             <a class="btn btn-link" ng-href="{{'#/rotas/' + item._id}}">
               <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
