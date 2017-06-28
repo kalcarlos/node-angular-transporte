@@ -12,20 +12,22 @@
       </div>
       <div class="form-group">
         <label for="cpf" class="col-sm-2 control-label">CPF</label>
-        <div class="col-sm-8">
+        <div class="col-sm-2">
           <input type="text" class="form-control" id="cpf" ng-model="vm.motorista.cpf" placeholder="CPF">
         </div>
       </div>
       <div class="form-group">
         <label for="dataNascimento" class="col-sm-2 control-label">Data de nascimento</label>
-        <div class="col-sm-4">
+        <div class="col-sm-2">
           <input type="text" class="form-control" id="dataNascimento" ng-model="vm.motorista.dataNascimento" placeholder="Data de nascimento">
         </div>
       </div>
       <div class="form-group">
         <label for="veiculo" class="col-sm-2 control-label">Veículo</label>
-        <div class="col-sm-8">
-          <input type="text" class="form-control" id="veiculo" ng-model="vm.motorista.veiculo" placeholder="Veículo">
+        <div class="col-sm-2" ng-controller="VeiculoController as vmVeiculo">
+          <select name="veiculo" ng-model="vm.motorista.veiculo" class="form-control" id="veiculo">
+            <option ng-repeat="item in vmVeiculo.veiculos" value="{{item._id}}">{{item.placa}}</option>
+          </select>
         </div>
       </div>
       <div class="row">

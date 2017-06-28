@@ -18,14 +18,16 @@
       </div>
       <div class="form-group">
         <label for="cnpj" class="col-sm-2 control-label">CNPJ</label>
-        <div class="col-sm-4">
+        <div class="col-sm-2">
           <input type="text" class="form-control" id="cnpj" ng-model="vm.empresa.cnpj" placeholder="CNPJ">
         </div>
       </div>
       <div class="form-group">
         <label for="endereco" class="col-sm-2 control-label">Endereço</label>
-        <div class="col-sm-8">
-          <input type="text" class="form-control" id="endereco" ng-model="vm.empresa.endereco" placeholder="Endereço">
+        <div class="col-sm-8" ng-controller="EnderecoController as vmEndereco">
+          <select name="endereco" ng-model="vm.empresa.endereco" class="form-control" id="endereco">
+            <option ng-repeat="item in vmEndereco.enderecos" value="{{item._id}}">{{item.logradouro}}</option>
+          </select>
         </div>
       </div>
       <div class="row">
